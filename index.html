@@ -4,35 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gerardo Mudarra</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       background: #fff;
-      color: #222;
+      color: #333;
       line-height: 1.6;
     }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #222;
+    }
+
     header {
-      background: url('https://instagram.fclj4-1.fna.fbcdn.net/v/t51.2885-15/358216517_993095085094607_6364410478930346346_n.jpg?stp=dst-jpg_e35') center/cover no-repeat;
+      position: relative;
+      background: url('images/gerardo1.jpg') center/cover no-repeat;
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      text-align: center;
     }
+
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1, header p, .header-cta {
+      position: relative;
+      z-index: 1;
+    }
+
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
     }
+
     header p {
-      font-size: 1.4em;
+      font-size: 1.5em;
       margin-top: 10px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .header-cta {
+      margin-top: 30px;
+      background: #fff;
+      color: #222;
+      padding: 12px 28px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .header-cta:hover {
+      background: #f4f4f4;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 80px 20px;
       max-width: 1000px;
       margin: auto;
     }
@@ -61,45 +103,60 @@
 
     .card {
       background: #f4f4f4;
-      padding: 30px;
-      border-radius: 10px;
-      flex: 1 1 250px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 12px;
+      flex: 1 1 280px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       text-align: center;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
     }
 
     .gallery img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 8px;
       object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+
+    .button {
+      display: inline-block;
+      background: #000;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #444;
     }
 
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 60px 20px;
       background: #222;
       color: white;
     }
 
-    a.button {
-      display: inline-block;
-      margin-top: 20px;
-      background: #000;
-      color: white;
-      padding: 10px 20px;
+    footer a {
+      color: #ccc;
       text-decoration: none;
-      border-radius: 30px;
-      transition: background 0.3s ease;
+      transition: color 0.3s ease;
     }
 
-    a.button:hover {
-      background: #444;
+    footer a:hover {
+      color: #fff;
     }
   </style>
 </head>
@@ -108,10 +165,11 @@
   <header>
     <h1>Gerardo Mudarra</h1>
     <p>Creative Mind. Sharp Suits. Honest Voice.</p>
+    <a href="#contact" class="header-cta">Work with Me</a>
   </header>
 
   <section class="about">
-    <img src="https://instagram.fclj4-1.fna.fbcdn.net/v/t51.2885-15/420085391_1125949545387830_6880938461222321194_n.jpg?stp=dst-jpg_e35" alt="Gerardo">
+    <img src="images/gerardo2.jpg" alt="Gerardo">
     <h2>About Me</h2>
     <p>Hola, soy Gerardo. I create thoughtful content that blends elegance, authenticity, and expression. Whether I'm speaking, writing, or just vibing with the camera, I aim to inspire confidence and truth.</p>
   </section>
@@ -134,20 +192,28 @@
     </div>
   </section>
 
-<section>
-  <h2 style="text-align:center;">Gallery</h2>
-  <div class="gallery">
-    <img src="images/gerardo1.jpg" alt="Gerardo 1" />
-    <img src="images/gerardo2.jpg" alt="Gerardo 2" />
-    <img src="images/gerardo3.jpg" alt="Gerardo 3" />
-    <img src="images/gerardo4.jpg" alt="Gerardo 4" />
-  </div>
-</section>
+  <section>
+    <h2 style="text-align:center;">Gallery</h2>
+    <div class="gallery">
+      <img src="images/gerardo1.jpg" alt="Gerardo 1" />
+      <img src="images/gerardo2.jpg" alt="Gerardo 2" />
+      <img src="images/gerardo3.jpg" alt="Gerardo 3" />
+      <img src="images/gerardo4.jpg" alt="Gerardo 4" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 style="text-align:center;">Get in Touch</h2>
+    <p style="text-align:center;">Interested in collaboration, speaking, or creative direction?</p>
+    <div style="text-align:center; margin-top: 20px;">
+      <a class="button" href="mailto:gerardo@example.com">Let's Connect</a>
+    </div>
+  </section>
 
   <footer>
-    <h3>Let's Connect</h3>
-    <p>Follow me on <a style="color: #ddd;" href="https://www.instagram.com/soygerardomudarra/" target="_blank">Instagram</a> or reach out via DM.</p>
-    <a class="button" href="mailto:gerardo@example.com">Get in Touch</a>
+    <p class="footer-text">
+      Made with ❤️ by Nelson Morales | <a href="https://www.instagram.com/soygerardomudarra/" target="_blank">Follow Gerardo</a>
+    </p>
   </footer>
 
 </body>
