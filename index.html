@@ -4,216 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gerardo Mudarra</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Source Sans Pro', sans-serif;
       background: #fff;
-      color: #333;
+      color: #222;
       line-height: 1.6;
     }
 
     h1, h2, h3 {
       font-family: 'Montserrat', sans-serif;
-      color: #222;
+      color: #111;
     }
 
-    header {
-      position: relative;
-      background: url('images/gerardo1.jpg') center/cover no-repeat;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hero {
       height: 100vh;
+      background: url('images/image01.JPG') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      color: white;
       text-align: center;
+      color: white;
+      position: relative;
     }
 
-    header::after {
+    .hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.5);
     }
 
-    header h1, header p, .header-cta {
+    .hero-content {
       position: relative;
       z-index: 1;
+      max-width: 800px;
+      padding: 0 20px;
     }
 
-    header h1 {
-      font-size: 3.5em;
-      margin: 0;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
     }
 
-    header p {
-      font-size: 1.5em;
-      margin-top: 10px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    .hero p {
+      font-size: 1.3em;
     }
 
-    .header-cta {
-      margin-top: 30px;
-      background: #fff;
-      color: #222;
-      padding: 12px 28px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .header-cta:hover {
-      background: #f4f4f4;
-    }
-
-    section {
-      padding: 80px 20px;
+    .section {
       max-width: 1000px;
-      margin: auto;
+      margin: 0 auto;
+      padding: 80px 20px;
     }
 
-    .about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    .section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 30px;
     }
 
-    .about img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    .cards {
+    .two-columns {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      gap: 40px;
     }
 
-    .card {
-      background: #f4f4f4;
-      padding: 40px;
-      border-radius: 12px;
-      flex: 1 1 280px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    .column {
+      flex: 1 1 300px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.2em;
+      margin: 40px 0;
+      color: #444;
       text-align: center;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      object-fit: cover;
-      transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.02);
     }
 
     .button {
       display: inline-block;
-      background: #000;
+      background: black;
       color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: background 0.3s ease;
+      padding: 15px 30px;
+      border-radius: 40px;
+      margin-top: 40px;
+      font-weight: bold;
     }
 
-    .button:hover {
-      background: #444;
+    .signature {
+      margin-top: 30px;
+      max-width: 160px;
     }
 
     footer {
       text-align: center;
       padding: 60px 20px;
-      background: #222;
+      background: #111;
       color: white;
     }
 
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
+    @media (max-width: 768px) {
+      .two-columns {
+        flex-direction: column;
+      }
 
-    footer a:hover {
-      color: #fff;
+      .hero h1 {
+        font-size: 2.2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Gerardo Mudarra</h1>
-    <p>Mente Creativa. Estilo Impecable. Voz Honesta.</p>
-    <a href="#contacto" class="header-cta">Trabaja Conmigo</a>
-  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Te ayudo a construir una marca personal auténtica</h1>
+      <p>que se vea, se sienta y se recuerde</p>
+      <img src="images/signature_white.png" alt="Firma Gerardo" class="signature" />
+    </div>
+  </section>
 
-  <section class="about">
-    <img src="images/gerardo2.jpg" alt="Gerardo">
+  <!-- Quién Soy -->
+  <section class="section">
+    <h2>Quién soy</h2>
+    <p>Soy Gerardo Mudarra, especialista en marca personal, comunicación e imagen auténtica. Trabajo con profesionales, artistas, emprendedores y marcas que desean destacar sin disfrazarse, impactar desde su esencia y dejar huella real en quien los ve, los escucha o los sigue.</p>
+    <p>Creo que tu historia tiene poder. Y yo te enseño a contarla, vestirla y proyectarla con intención.</p>
+    <img src="images/image02.JPG" alt="Gerardo Mudarra" />
+  </section>
+
+  <!-- Propósito -->
+  <section class="section">
+    <h2>Propósito</h2>
+    <div class="two-columns">
+      <div class="column">
+        <h3>Para personas</h3>
+        <p>Ayudo a las personas a destacar siendo ellas mismas. Me especializo en desarrollo de marca personal con enfoque en comunicación e imagen. Alineo quién eres con lo que proyectas para que tu mensaje sea auténtico, poderoso y memorable.</p>
+        <p>No importa si eres artista, emprendedor o profesional: todos tenemos una historia que merece ser contada, y yo te enseño a contarla y sostenerla con presencia y coherencia.</p>
+        <img src="images/image03.JPG" alt="Propósito Personas" />
+      </div>
+      <div class="column">
+        <h3>Para marcas y empresas</h3>
+        <p>Ayudo a las marcas a conectar genuinamente con su audiencia. Alineo la esencia del negocio con su comunicación. Diseño estrategias de imagen, contenido y comunicación emocional que generan impacto y construyen lealtad.</p>
+        <p>Cada negocio tiene una historia única. Y yo te ayudo a contarla con intención, autenticidad y fuerza.</p>
+        <img src="images/image04.JPG" alt="Propósito Marcas" />
+      </div>
+    </div>
+  </section>
+  <!-- Sobre Mí -->
+  <section class="section">
     <h2>Sobre mí</h2>
-    <p>Hola, soy Gerardo. Creo contenido con propósito, combinando elegancia, autenticidad y expresión. Ya sea hablando, escribiendo o frente a la cámara, mi objetivo es inspirar confianza y verdad.</p>
+    <p class="quote">“Tu historia no necesita filtros. Necesita ser contada con verdad.”</p>
+    <p>Soy comunicador, actor, creativo y formador. Pero antes de enseñar a otros a hablar, vestir y brillar con autenticidad, fui una historia que tuvo que aprenderlo todo desde dentro.</p>
+    <p>Fui un niño con tartamudez. Me costaba expresar mi voz y aceptarme frente al espejo. Hoy, esa misma voz guía a otras personas a reconectar con su esencia, expresarse sin miedo y mostrarse con poder, desde lo que verdaderamente son.</p>
+    <p>He dedicado los últimos 20 años a formar y acompañar a profesionales, artistas, emprendedores y marcas que buscan impactar con verdad. Lo hago desde la experiencia, la sensibilidad y el compromiso profundo de quien sabe lo que cuesta brillar cuando no te crees suficiente.</p>
+    <p>No creo en fórmulas vacías, ni en disfraces que no representen tu esencia. Creo en lo real, lo emocional y lo estratégico. Creo en el poder de comunicar desde lo que eres.</p>
+    <p>¿Qué tienen en común mis clientes? Que entendieron que no basta con tener presencia. Hay que tener propósito.</p>
+    <img src="images/image05.JPG" alt="Gerardo expresando" />
   </section>
 
-  <section>
-    <h2 style="text-align:center;">Lo que hago</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Oratoria</h3>
-        <p>Motivando a otros con presencia, pasión y propósito.</p>
+  <!-- Experiencias -->
+  <section class="section">
+    <h2>Experiencias que te impulsan</h2>
+    <p>Charlas, masterclass y talleres que despiertan tu autenticidad, tu voz y tu imagen. Espacios diseñados para ayudarte a comunicar con intención, proyectarte con seguridad y dejar huella desde lo que eres.</p>
+
+    <div class="two-columns">
+      <div class="column">
+        <h3>Charlas & Masterclass</h3>
+        <p><strong>Arriésgate a Confiar en Ti</strong><br />
+        Una charla gratuita para quienes comienzan su camino de transformación personal. Inspiración + ejercicios + acceso a programas.</p>
+
+        <p><strong>Habla con Poder, Conquista con Historias</strong><br />
+        Masterclass online de storytelling estratégico para comunicar con emoción y propósito. Ideal para líderes, artistas, emprendedores.</p>
+
+        <p><strong>Tu Imagen Habla</strong><br />
+        Una masterclass para entender el poder silencioso de tu imagen personal. Aprende a vestirte desde tu autenticidad.</p>
       </div>
-      <div class="card">
-        <h3>Creación de contenido</h3>
-        <p>Reels, storytelling creativo y estética visual.</p>
+
+      <div class="column">
+        <h3>Talleres Especializados</h3>
+        <p><strong>Fashion Camp – Marca Personal</strong><br />
+        Programa intensivo de 15 días para construir una marca auténtica y emocional. Clases + retos + seguimiento personalizado.</p>
+
+        <p><strong>Proyección Escénica</strong><br />
+        Taller para modelos y artistas que desean dominar la escena con autenticidad. Técnicas de expresión, postura, presencia.</p>
+
+        <p><strong>Aprende a Ser Fotogénico(a)</strong><br />
+        Reconéctate con la cámara y transmite desde lo genuino. Técnicas de expresión facial, mirada, cuerpo y prácticas guiadas.</p>
       </div>
-      <div class="card">
-        <h3>Dirección creativa</h3>
-        <p>Desde el vestuario hasta las ideas, doy vida a proyectos con estilo.</p>
-      </div>
+    </div>
+    <img src="images/image06.jpg" alt="Talleres" />
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section" style="text-align: center;">
+    <h2>¿Listo para comenzar tu transformación?</h2>
+    <p>Comienza tu proceso hoy. Pide más información o agenda tu primera sesión.</p>
+    <a href="mailto:gerardo@example.com" class="button">Comienza tu proceso</a>
+    <div>
+      <img src="images/signature_black.png" alt="Firma Gerardo" class="signature" />
     </div>
   </section>
 
-  <section>
-    <h2 style="text-align:center;">Galería</h2>
-    <div class="gallery">
-      <img src="images/gerardo1.jpg" alt="Gerardo 1" />
-      <img src="images/gerardo2.jpg" alt="Gerardo 2" />
-      <img src="images/gerardo3.jpg" alt="Gerardo 3" />
-      <img src="images/gerardo4.jpg" alt="Gerardo 4" />
-    </div>
-  </section>
-
-  <section id="contacto">
-    <h2 style="text-align:center;">Contacto</h2>
-    <p style="text-align:center;">¿Te interesa colaborar, contratarme para charlas o trabajar en tu marca personal?</p>
-    <div style="text-align:center; margin-top: 20px;">
-      <a class="button" href="mailto:gerardo@example.com">Escríbeme</a>
-    </div>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p class="footer-text">
-      Hecho con ❤️ por Nelson Morales | <a href="https://www.instagram.com/soygerardomudarra/" target="_blank">Instagram de Gerardo</a>
-    </p>
+    <p>© 2025 Gerardo Mudarra | Hecho con ❤️ por Nelson Morales</p>
+    <p><a href="https://www.instagram.com/soygerardomudarra/" target="_blank">Instagram</a></p>
   </footer>
 
 </body>
