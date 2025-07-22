@@ -20,7 +20,6 @@
 
     h1, h2, h3 {
       font-family: 'Montserrat', sans-serif;
-      color: #111;
     }
 
     a {
@@ -28,23 +27,31 @@
       color: inherit;
     }
 
-    .hero {
-      height: 100vh;
-      background: url('images/image01.JPG') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
+.hero {
+  height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #222;
+  position: relative;
+}
+.hero-profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
 
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.5);
     }
 
     .hero-content {
@@ -55,9 +62,8 @@
     }
 
     .hero h1 {
-      font-size: 3em;
+      font-size: 2em;
       margin-bottom: 0.3em;
-      color: #fff;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
 
@@ -137,9 +143,10 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Te ayudo a construir una marca personal auténtica</h1>
-      <p>que se vea, se sienta y se recuerde</p>
-      <img src="images/signature_white.png" alt="Firma Gerardo" class="signature" />
+<img src="images/image01.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+<h2>Te ayudo a construir una marca personal auténtica</h2>
+<h1>que se vea, se sienta y se recuerde.</h1>
+<img src="images/signature_black.png" alt="Firma Gerardo" class="signature" />
     </div>
   </section>
 
