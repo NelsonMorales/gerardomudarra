@@ -77,6 +77,13 @@
       padding: 80px 20px;
     }
 
+    .section-grey {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      background: silver;
+    }
+
     .section img {
       max-width: 100%;
       border-radius: 10px;
@@ -91,6 +98,11 @@
 
     .column {
       flex: 1 1 300px;
+    }
+    
+    .column-centre {
+      flex: 1 1 300px;
+      text-align: center;
     }
 
     .quote {
@@ -153,26 +165,29 @@
   <!-- Quién Soy -->
   <section class="section">
     <h2>Quién soy</h2>
+    <div class="two-columns">
+      <div class="column">
     <p>Soy Gerardo Mudarra, especialista en marca personal, comunicación e imagen auténtica. Trabajo con profesionales, artistas, emprendedores y marcas que desean destacar sin disfrazarse, impactar desde su esencia y dejar huella real en quien los ve, los escucha o los sigue.</p>
     <p>Creo que tu historia tiene poder. Y yo te enseño a contarla, vestirla y proyectarla con intención.</p>
-    <img src="images/image02.JPG" alt="Gerardo Mudarra" />
+      </div>
+      <div class="column-centre">
+    <img src="images/image02.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+      </div>
   </section>
 
   <!-- Propósito -->
-  <section class="section">
+  <section class="section-grey">
     <h2>Propósito</h2>
     <div class="two-columns">
       <div class="column">
         <h3>Para personas</h3>
         <p>Ayudo a las personas a destacar siendo ellas mismas. Me especializo en desarrollo de marca personal con enfoque en comunicación e imagen. Alineo quién eres con lo que proyectas para que tu mensaje sea auténtico, poderoso y memorable.</p>
         <p>No importa si eres artista, emprendedor o profesional: todos tenemos una historia que merece ser contada, y yo te enseño a contarla y sostenerla con presencia y coherencia.</p>
-        <img src="images/image03.JPG" alt="Propósito Personas" />
       </div>
       <div class="column">
         <h3>Para marcas y empresas</h3>
         <p>Ayudo a las marcas a conectar genuinamente con su audiencia. Alineo la esencia del negocio con su comunicación. Diseño estrategias de imagen, contenido y comunicación emocional que generan impacto y construyen lealtad.</p>
         <p>Cada negocio tiene una historia única. Y yo te ayudo a contarla con intención, autenticidad y fuerza.</p>
-        <img src="images/image04.JPG" alt="Propósito Marcas" />
       </div>
     </div>
   </section>
