@@ -347,19 +347,59 @@
   </section>
 
   <!-- CTA Final -->
-  <section class="section" style="text-align: center;">
-    <h2>¿Listo para comenzar tu transformación?</h2>
-    <p>Comienza tu proceso hoy. Pide más información o agenda tu primera sesión.</p>
-<a href="mailto:soygerardomudarra@gmail.com?subject=Formulario%20de%20contacto%20-%20Marca%20personal&body=
-1.%20Nombre%20completo%20%0A(Para%20saber%20con%20quién%20tendré%20el%20placer%20de%20hablar.)%0A%0A________________________________%0A%0A
-2.%20Correo%20electrónico%20%0A(Donde%20podré%20escribirte%20personalmente.)%0A%0A________________________________%0A%0A
-3.%20Fecha%20de%20nacimiento%20%0A(Me%20ayuda%20a%20conocerte%20mejor%20como%20persona%20y%20acompañarte%20con%20más%20empatía.)%0A%0A________________________________%0A%0A
-4.%20Redes%20sociales%20(Instagram,%20LinkedIn,%20etc.)%0A(Para%20ver%20tu%20estilo%20actual%20y%20empezar%20a%20visualizar%20tu%20evolución.)%0A%0A________________________________%0A%0A
-5.%20¿Qué%20te%20gustaría%20mejorar%20o%20potenciar%20de%20tu%20marca%20personal?%0A(Puedes%20marcar%20más%20de%20una%20opción)%0A-%20Imagen%20personal%0A-%20Comunicación%20y%20oratoria%0A-%20Presencia%20digital%0A-%20Autenticidad%20y%20propósito%0A-%20Seguridad%20al%20hablar%20o%20mostrarse%0A-%20Otro:%20__________%0A%0A________________________________%0A%0A
-6.%20Cuéntame%20brevemente%20qué%20te%20mueve%20o%20qué%20estás%20buscando%0A(Este%20espacio%20es%20solo%20tuyo.%20Sé%20libre,%20sé%20tú.)%0A%0A________________________________%0A%0A
-7.%20¿Cómo%20te%20gustaría%20que%20te%20contacte?%0A-%20Correo%20electrónico%0A-%20WhatsApp%0A-%20Videollamada%20(Zoom%20o%20Meet)%0A-%20Número%20de%20WhatsApp%20(opcional):%20________________" 
-class="button">Comienza tu proceso</a>
-  </section>
+<!-- Formulario de contacto -->
+<section class="section" style="max-width: 700px; margin: 0 auto;">
+  <h2 style="text-align: center;">¿Listo para comenzar tu transformación?</h2>
+  <p style="text-align: center;">Completa el formulario y te contactaré personalmente.</p>
+
+  <form action="https://formspree.io/f/xovlpoae" method="POST">
+    <label>Nombre completo<br />
+      <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Correo electrónico<br />
+      <input type="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Fecha de nacimiento<br />
+      <input type="date" name="fecha_nacimiento" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Redes sociales (Instagram, LinkedIn, etc.)<br />
+      <input type="text" name="redes" placeholder="https://..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>¿Qué te gustaría mejorar o potenciar de tu marca personal?<br />
+      <select name="intereses[]" multiple size="6" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;">
+        <option>Imagen personal</option>
+        <option>Comunicación y oratoria</option>
+        <option>Presencia digital</option>
+        <option>Autenticidad y propósito</option>
+        <option>Seguridad al hablar o mostrarse</option>
+        <option>Otro</option>
+      </select>
+    </label>
+
+    <label>Cuéntame brevemente qué te mueve o qué estás buscando<br />
+      <textarea name="mensaje" rows="5" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;"></textarea>
+    </label>
+
+    <label>¿Cómo te gustaría que te contacte?<br />
+      <select name="preferencia_contacto" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 10px;">
+        <option>Correo electrónico</option>
+        <option>WhatsApp</option>
+        <option>Videollamada (Zoom o Meet)</option>
+      </select>
+    </label>
+
+    <label>Número de WhatsApp (opcional)<br />
+      <input type="text" name="whatsapp" placeholder="+34..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <button type="submit" class="button">Enviar</button>
+  </form>
+</section>
+
   <section class="hero-signature">
 
     <div class="hero-content">
