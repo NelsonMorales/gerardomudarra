@@ -348,11 +348,15 @@
 
   <!-- CTA Final -->
 <!-- Formulario de contacto -->
-<section class="section" style="max-width: 700px; margin: 0 auto;">
+<!-- CTA Final -->
+<section class="section" style="max-width: 700px; margin: 0 auto;" id="cta">
   <h2 style="text-align: center;">¿Listo para comenzar tu transformación?</h2>
-  <p style="text-align: center;">Completa el formulario y te contactaré personalmente.</p>
+  <div style="text-align: center;">
+    <button class="button" onclick="mostrarFormulario()">¡Comienza ahora!</button>
+  </div>
 
-  <form action="https://formspree.io/f/xovlpoae" method="POST">
+  <!-- Formulario oculto al inicio -->
+  <form id="formulario-contacto" action="https://formspree.io/f/xovlpoae" method="POST" style="display: none; margin-top: 40px;">
     <label>Nombre completo<br />
       <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
     </label>
@@ -399,6 +403,14 @@
     <button type="submit" class="button">Enviar</button>
   </form>
 </section>
+
+<script>
+  function mostrarFormulario() {
+    const form = document.getElementById('formulario-contacto');
+    form.style.display = 'block';
+    form.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
 
   <section class="hero-signature">
 
