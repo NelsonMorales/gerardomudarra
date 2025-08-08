@@ -47,7 +47,16 @@
   border: 4px solid #f0f0f0;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
-
+.circle-profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
     .hero::after {
       content: '';
       position: absolute;
@@ -86,9 +95,31 @@
 
     .section img {
       max-width: 100%;
-      border-radius: 10px;
       margin-top: 30px;
     }
+
+.section img.circle-profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.square-profile {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: 4px solid #f0f0f0;
+  width: 180px;
+  height: 180px;
+}
 
     .two-columns {
       display: flex;
@@ -176,7 +207,7 @@
     <p>Creo que tu historia tiene poder. Y yo te enseño a contarla, vestirla y proyectarla con intención.</p>
       </div>
       <div class="column-centre">
-    <img src="images/image02.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+    <img src="images/image02.JPG" alt="Gerardo Mudarra" class="circle-profile" />
       </div>
   </section>
 
@@ -221,7 +252,7 @@
 
       <div class="column">
     <div class="hero-content">
-<img src="images/image05.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+<img src="images/image05.JPG" alt="Gerardo Mudarra" class="square-profile" />
     </div>
       </div>
     </div>
@@ -236,7 +267,7 @@
 
       <div class="column">
     <div class="hero-content">
-<img src="images/image03.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+<img src="images/image03.JPG" alt="Gerardo Mudarra" class="square-profile" />
     </div>
       </div>
     </div>
@@ -249,7 +280,7 @@
 
       <div class="column">
     <div class="hero-content">
-<img src="images/image09.jpeg" alt="Gerardo Mudarra" class="hero-profile" />
+<img src="images/image09.jpeg" alt="Gerardo Mudarra" class="square-profile" />
     </div>
       </div>
     </div>
@@ -263,7 +294,7 @@
 
       <div class="column">
     <div class="hero-content">
-<img src="images/image07.jpg" alt="Gerardo Mudarra" class="hero-profile" />
+<img src="images/image07.jpg" alt="Gerardo Mudarra" class="square-profile" />
     </div>
       </div>
     </div>
@@ -279,7 +310,7 @@
 
       <div class="column">
     <div class="hero-content">
-<img src="images/image06.jpg" alt="Gerardo Mudarra" class="hero-profile" />
+<img src="images/image06.jpg" alt="Gerardo Mudarra" class="square-profile" />
     </div>
       </div>
     </div>
@@ -292,7 +323,7 @@
 
       <div class="column">
     <div class="hero-content">
-<img src="images/image04.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+<img src="images/image04.JPG" alt="Gerardo Mudarra" class="square-profile" />
     </div>
       </div>
     </div>
