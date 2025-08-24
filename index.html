@@ -59,6 +59,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0px;
+  margin-top: 200px;
   border: 4px solid #f0f0f0;
   box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
@@ -199,12 +200,71 @@
         font-size: 1em;
       }
     }
-  </style>
+  
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 9999;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navbar-socials a {
+  color: #222;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+}
+</style>
 </head>
 <body>
 
+<!-- NAVBAR FIJO -->
+<div class="navbar">
+  <div class="navbar-logo">
+    <a href="#top"><img src="images/signature_black.png" alt="Gerardo Logo" /></a>
+  </div>
+
+  <div class="navbar-links">
+    <a href="#quien-soy">Conóceme</a>
+    <a href="#proposito">Propósito</a>
+    <a href="#experiencias">Servicios</a>
+    <a href="#cta">Contacto</a>
+  </div>
+
+  <div class="navbar-socials">
+    <a href="https://www.instagram.com/soygerardomudarra/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@Gerardomudarra" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.tiktok.com/@soygerardomudarra" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.linkedin.com/in/gerardo-mudarra-4257b4170/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
+
+
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-content">
 <img src="images/image08.JPG" alt="Gerardo Mudarra" class="hero-profile" />
 <h2>Te ayudo a construir una marca personal auténtica</h2>
@@ -215,7 +275,7 @@
   <!-- CTA Final -->
 <!-- Formulario de contacto DUPLICADO -->
 <!-- CTA Final -->
-<section class="section" style="max-width: 700px; margin: 0 auto;" id="cta">
+<section class="section" style="max-width: 700px; margin: 0 auto;">
   <h2 style="text-align: center;">¿Listo para comenzar tu transformación?</h2>
   <div style="text-align: center;">
     <button class="button" onclick="mostrarFormulario()">¡Comienza ahora!</button>
@@ -272,7 +332,7 @@
 
 
   <!-- Quién Soy -->
-  <section class="section">
+  <section class="section" id="quien-soy">
     <h2>Quién soy</h2>
     <div class="two-columns">
       <div class="column">
@@ -294,7 +354,7 @@
   </section>
 
   <!-- Propósito -->
-  <section class="section-grey">
+  <section class="section-grey" id="proposito">
     <h2>Propósito</h2>
     <div class="two-columns">
       <div class="column">
@@ -311,7 +371,7 @@
   </section>
 
   <!-- Experiencias -->
-  <section class="section">
+  <section class="section" id="experiencias">
     <h2>Experiencias que te impulsan</h2>
     <p>Charlas, masterclass y talleres que despiertan tu autenticidad, tu voz y tu imagen. Espacios diseñados para ayudarte a comunicar con intención, proyectarte con seguridad y dejar huella desde lo que eres.</p>
 
