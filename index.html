@@ -232,11 +232,27 @@
   font-size: 18px;
 }
 
+/* Íconos de navegación para móvil */
+.navbar-icons-mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
   }
+  .navbar-icons-mobile {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-icons-mobile a {
+    color: #222;
+  }
 }
+
 </style>
 </head>
 <body>
@@ -245,6 +261,14 @@
 <div class="navbar">
   <div class="navbar-logo">
     <a href="#top"><img src="images/signature_black.png" alt="Gerardo Logo" /></a>
+  </div>
+
+  <!-- Íconos de navegación para versión móvil -->
+  <div class="navbar-icons-mobile">
+    <a href="#quien-soy" title="Conóceme"><i class="fas fa-user"></i></a>
+    <a href="#proposito" title="Propósito"><i class="fas fa-bullseye"></i></a>
+    <a href="#experiencias" title="Servicios"><i class="fas fa-briefcase"></i></a>
+    <a href="#cta" title="Contacto"><i class="fas fa-envelope"></i></a>
   </div>
 
   <div class="navbar-links">
