@@ -360,54 +360,6 @@
   <div style="text-align: center;">
     <button class="button" onclick="mostrarFormulario()">¡Comienza ahora!</button>
   </div>
-
-  <!-- Formulario oculto al inicio -->
-  <form id="formulario-contacto" action="https://formspree.io/f/xovlpoae" method="POST" style="display: none; margin-top: 40px;">
-    <label>Nombre completo<br />
-      <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
-    </label>
-
-    <label>Correo electrónico<br />
-      <input type="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
-    </label>
-
-    <label>Fecha de nacimiento<br />
-      <input type="date" name="fecha_nacimiento" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
-    </label>
-
-    <label>Redes sociales (Instagram, LinkedIn, etc.)<br />
-      <input type="text" name="redes" placeholder="https://..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
-    </label>
-
-    <label>¿Qué te gustaría mejorar o potenciar de tu marca personal?<br />
-      <select name="intereses[]" multiple size="6" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;">
-        <option>Imagen personal</option>
-        <option>Comunicación y oratoria</option>
-        <option>Presencia digital</option>
-        <option>Autenticidad y propósito</option>
-        <option>Seguridad al hablar o mostrarse</option>
-        <option>Otro</option>
-      </select>
-    </label>
-
-    <label>Cuéntame brevemente qué te mueve o qué estás buscando<br />
-      <textarea name="mensaje" rows="5" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;"></textarea>
-    </label>
-
-    <label>¿Cómo te gustaría que te contacte?<br />
-      <select name="preferencia_contacto" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 10px;">
-        <option>Correo electrónico</option>
-        <option>WhatsApp</option>
-        <option>Videollamada (Zoom o Meet)</option>
-      </select>
-    </label>
-
-    <label>Número de WhatsApp (opcional)<br />
-      <input type="text" name="whatsapp" placeholder="+34..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
-    </label>
-
-    <button type="submit" class="button">Enviar</button>
-  </form>
 </section>
 
 
@@ -554,6 +506,54 @@
   <div style="text-align: center;">
     <button class="button" onclick="mostrarFormulario()">¡Comienza ahora!</button>
   </div>
+
+  <!-- Formulario oculto al inicio -->
+  <form id="formulario-contacto" action="https://formspree.io/f/xovlpoae" method="POST" style="display: none; margin-top: 40px;">
+    <label>Nombre completo<br />
+      <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Correo electrónico<br />
+      <input type="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Fecha de nacimiento<br />
+      <input type="date" name="fecha_nacimiento" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Redes sociales (Instagram, LinkedIn, etc.)<br />
+      <input type="text" name="redes" placeholder="https://..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>¿Qué te gustaría mejorar o potenciar de tu marca personal?<br />
+      <select name="intereses[]" multiple size="6" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;">
+        <option>Imagen personal</option>
+        <option>Comunicación y oratoria</option>
+        <option>Presencia digital</option>
+        <option>Autenticidad y propósito</option>
+        <option>Seguridad al hablar o mostrarse</option>
+        <option>Otro</option>
+      </select>
+    </label>
+
+    <label>Cuéntame brevemente qué te mueve o qué estás buscando<br />
+      <textarea name="mensaje" rows="5" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;"></textarea>
+    </label>
+
+    <label>¿Cómo te gustaría que te contacte?<br />
+      <select name="preferencia_contacto" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 10px;">
+        <option>Correo electrónico</option>
+        <option>WhatsApp</option>
+        <option>Videollamada (Zoom o Meet)</option>
+      </select>
+    </label>
+
+    <label>Número de WhatsApp (opcional)<br />
+      <input type="text" name="whatsapp" placeholder="+34..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <button type="submit" class="button">Enviar</button>
+  </form>
 
 </section>
 
