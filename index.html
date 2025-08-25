@@ -253,37 +253,92 @@
   }
 }
 
+
+  /* Estilos para menú hamburguesa móvil */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #222;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    color: #222;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .navbar-links {
+      display: none;
+    }
+
+    .navbar-icons-mobile {
+      display: none;
+    }
+  }
+
+
+
 </style>
 </head>
 <body>
 
 <!-- NAVBAR FIJO -->
 <div class="navbar">
-  <div class="navbar-logo">
-    <a href="#top"><img src="images/signature_black.png" alt="Gerardo Logo" /></a>
-  </div>
+<!-- REEMPLAZA este bloque existente dentro de <div class="navbar"> -->
 
-  <!-- Íconos de navegación para versión móvil -->
-  <div class="navbar-icons-mobile">
-    <a href="#quien-soy" title="Conóceme"><i class="fas fa-user"></i></a>
-    <a href="#proposito" title="Propósito"><i class="fas fa-bullseye"></i></a>
-    <a href="#experiencias" title="Servicios"><i class="fas fa-briefcase"></i></a>
-    <a href="#cta" title="Contacto"><i class="fas fa-envelope"></i></a>
-  </div>
+<!-- Versión Web: logo + enlaces + redes sociales -->
+<div class="navbar-logo">
+  <a href="#top"><img src="images/signature_black.png" alt="Gerardo Logo" /></a>
+</div>
 
-  <div class="navbar-links">
-    <a href="#quien-soy">Conóceme</a>
-    <a href="#proposito">Propósito</a>
-    <a href="#experiencias">Servicios</a>
-    <a href="#cta">Contacto</a>
-  </div>
+<!-- Menú hamburguesa solo en móviles -->
+<div class="hamburger" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
 
-  <div class="navbar-socials">
-    <a href="https://www.instagram.com/soygerardomudarra/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.youtube.com/@Gerardomudarra" target="_blank"><i class="fab fa-youtube"></i></a>
-    <a href="https://www.tiktok.com/@soygerardomudarra" target="_blank"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.linkedin.com/in/gerardo-mudarra-4257b4170/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
+<!-- Menú desplegable en móviles -->
+<div id="mobileMenu" class="mobile-menu">
+  <a href="#quien-soy">Conóceme</a>
+  <a href="#proposito">Propósito</a>
+  <a href="#experiencias">Servicios</a>
+  <a href="#cta">Contacto</a>
+</div>
+
+<!-- Menú de navegación para escritorio -->
+<div class="navbar-links">
+  <a href="#quien-soy">Conóceme</a>
+  <a href="#proposito">Propósito</a>
+  <a href="#experiencias">Servicios</a>
+  <a href="#cta">Contacto</a>
+</div>
+
+<div class="navbar-socials">
+  <a href="https://www.instagram.com/soygerardomudarra/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@Gerardomudarra" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.tiktok.com/@soygerardomudarra" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://www.linkedin.com/in/gerardo-mudarra-4257b4170/" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
 </div>
 
 
@@ -535,6 +590,18 @@
     </a>
   </div>
 </footer>
+
+<!-- AÑADE esto antes del cierre del <body> -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    if (menu.style.display === "flex") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "flex";
+    }
+  }
+</script>
 
 
 </body>
