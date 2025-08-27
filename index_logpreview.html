@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J8WXMKBVF4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J8WXMKBVF4');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerardo Mudarra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/signature_black.png" type="image/png" />
+<!-- Font Awesome para íconos de redes sociales -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+.hero {
+  padding-top: 100px; /* compensa el menú fijo */
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #222;
+  position: relative;
+}
+
+.hero-signature {
+  height: 30vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #222;
+  position: relative;
+}
+.hero-profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0px;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.circle-profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2em;
+      margin-bottom: 0.3em;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.3em;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .section-grey {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      background: silver;
+    }
+
+    .section img {
+      max-width: 100%;
+      margin-top: 30px;
+    }
+
+.section img.circle-profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  border: 4px solid #f0f0f0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.square-profile {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin: 30px auto;
+  display: block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border: 4px solid #f0f0f0;
+  width: 180px;
+  height: 180px;
+}
+
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .column {
+      flex: 1 1 50px;
+    }
+    
+    .column-centre {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 1.2em;
+      margin: 40px 0;
+      color: #444;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 40px;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    .signature {
+      margin-top: 30px;
+      max-width: 160px;
+    }
+
+    .signature2 {
+      margin-top: 30px;
+      max-width: 50px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: #111;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .two-columns {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 2.2em;
+      }
+
+      .hero p {
+        font-size: 1em;
+      }
+    }
+  
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  z-index: 9999;
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navbar-socials a {
+  color: #222;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+/* Íconos de navegación para móvil */
+.navbar-icons-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-icons-mobile {
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-icons-mobile a {
+    color: #222;
+  }
+}
+
+
+  /* Estilos para menú hamburguesa móvil */
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #222;
+  }
+
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .mobile-menu a {
+    padding: 15px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    color: #222;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+
+    .navbar-links {
+      display: none;
+    }
+
+    .navbar-icons-mobile {
+      display: none;
+    }
+  }
+
+
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR FIJO -->
+<div class="navbar">
+<!-- REEMPLAZA este bloque existente dentro de <div class="navbar"> -->
+
+<!-- Versión Web: logo + enlaces + redes sociales -->
+<div class="navbar-logo">
+  <a href="#top"><img src="images/signature_black.png" alt="Gerardo Logo" /></a>
+</div>
+
+<!-- Menú hamburguesa solo en móviles -->
+<div class="hamburger" onclick="toggleMenu()">
+	<i class="fas fa-bars"></i> <b>Menu</b>
+</div>
+
+<!-- Menú desplegable en móviles -->
+<div id="mobileMenu" class="mobile-menu">
+  <a href="#quien-soy">Conóceme</a>
+  <a href="#proposito">Propósito</a>
+  <a href="#experiencias">Servicios</a>
+  <a href="#cta">Contacto</a>
+  <a href="#blog">Blog</a>
+</div>
+
+<!-- Menú de navegación para escritorio -->
+<div class="navbar-links">
+  <a href="#quien-soy">Conóceme</a>
+  <a href="#proposito">Propósito</a>
+  <a href="#experiencias">Servicios</a>
+  <a href="#cta">Contacto</a>
+  <a href="#blog">Blog</a>
+</div>
+
+<div class="navbar-socials">
+  <a href="https://www.instagram.com/soygerardomudarra/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@Gerardomudarra" target="_blank"><i class="fab fa-youtube"></i></a>
+  <a href="https://www.tiktok.com/@soygerardomudarra" target="_blank"><i class="fab fa-tiktok"></i></a>
+  <a href="https://www.linkedin.com/in/gerardo-mudarra-4257b4170/" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+</div>
+
+
+  <!-- Hero -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <img src="images/image08.JPG" alt="Gerardo Mudarra" class="hero-profile" />
+    <h2 style="margin-top: 20px;">Te ayudo a construir una marca personal auténtica</h2>
+    <h1>que se vea, se sienta y se recuerde.</h1>
+    <img src="images/signature_black.png" alt="Firma Gerardo" class="signature" />
+  </div>
+</section>
+
+  <!-- CTA Final -->
+<!-- Formulario de contacto DUPLICADO -->
+<!-- CTA Final -->
+<section class="section" style="max-width: 700px; margin: 0 auto;">
+  <h2 style="text-align: center;">¿Listo para comenzar tu transformación?</h2>
+  <div style="text-align: center;">
+    <button class="button" onclick="mostrarFormulario()">¡Comienza ahora!</button>
+  </div>
+</section>
+
+
+  <!-- Quién Soy -->
+  <section class="section" id="quien-soy">
+    <h2>Quién soy</h2>
+    <div class="two-columns">
+      <div class="column">
+    <p>Soy Gerardo Mudarra, especialista en marca personal, comunicación e imagen auténtica. Trabajo con profesionales, artistas, emprendedores y marcas que desean destacar sin disfrazarse, impactar desde su esencia y dejar huella real en quien los ve, los escucha o los sigue.</p>
+    <p>Creo que tu historia tiene poder. Y yo te enseño a contarla, vestirla y proyectarla con intención.</p>
+      </div>
+      <div class="column-centre">
+    <img src="images/image02.JPG" alt="Gerardo Mudarra" class="circle-profile" />
+      </div>
+  <!-- Sobre Mí -->
+  <div>
+    <p class="quote">“Tu historia no necesita filtros. Necesita ser contada con verdad.”</p>
+    <p>Soy comunicador, actor, creativo y formador. Pero antes de enseñar a otros a hablar, vestir y brillar con autenticidad, fui una historia que tuvo que aprenderlo todo desde dentro.</p>
+    <p>Fui un niño con tartamudez. Me costaba expresar mi voz y aceptarme frente al espejo. Hoy, esa misma voz guía a otras personas a reconectar con su esencia, expresarse sin miedo y mostrarse con poder, desde lo que verdaderamente son.</p>
+    <p>He dedicado los últimos 20 años a formar y acompañar a profesionales, artistas, emprendedores y marcas que buscan impactar con verdad. Lo hago desde la experiencia, la sensibilidad y el compromiso profundo de quien sabe lo que cuesta brillar cuando no te crees suficiente.</p>
+    <p>No creo en fórmulas vacías, ni en disfraces que no representen tu esencia. Creo en lo real, lo emocional y lo estratégico. Creo en el poder de comunicar desde lo que eres.</p>
+    <p>¿Qué tienen en común mis clientes? Que entendieron que no basta con tener presencia. Hay que tener propósito.</p>
+  </div>
+  </section>
+
+  <section class="section" id="proposito">
+    <h2>Propósito</h2>
+  </section>
+  <!-- Propósito -->
+  <section class="section-grey">
+    <div class="two-columns">
+      <div class="column">
+        <h3>Para personas</h3>
+	<p>Ayudo a las personas a destacar siendo ellas mismas. Me especializo en desarrollo de marca personal con enfoque en comunicación e imagen. <b>Alineo quién eres con lo que proyectas para que tu mensaje sea auténtico, poderoso y memorable</b>.</p>
+        <p>No importa si eres artista, emprendedor o profesional: todos tenemos una historia que merece ser contada, y yo te enseño a contarla y sostenerla con presencia y coherencia.</p>
+      </div>
+      <div class="column">
+        <h3>Para marcas y empresas</h3>
+	<p>Ayudo a las marcas a conectar genuinamente con su audiencia. Alineo la esencia del negocio con su comunicación. <b>Diseño estrategias de imagen, contenido y comunicación emocional que generan impacto y construyen lealtad</b>.</p>
+        <p>Cada negocio tiene una historia única. Y yo te ayudo a contarla con intención, autenticidad y fuerza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencias -->
+  <section class="section" id="experiencias">
+    <h2>Experiencias que te impulsan</h2>
+    <p>Charlas, masterclass y talleres que despiertan tu autenticidad, tu voz y tu imagen. Espacios diseñados para ayudarte a comunicar con intención, proyectarte con seguridad y dejar huella desde lo que eres.</p>
+
+    <div class="two-columns">
+      <div class="column">
+        <h3>Charlas & Masterclass</h3>
+        <p><strong>Arriésgate a Confiar en Ti</strong><br />
+        Una charla gratuita para quienes comienzan su camino de transformación personal. Inspiración + ejercicios + acceso a programas.</p>
+      </div>
+
+      <div class="column">
+    <div class="hero-content">
+<img src="images/image05.JPG" alt="Gerardo Mudarra" class="square-profile" />
+    </div>
+      </div>
+    </div>
+
+
+
+    <div class="two-columns">
+      <div class="column">
+        <p><strong>Habla con Poder, Conquista con Historias</strong><br />
+        Masterclass online de storytelling estratégico para comunicar con emoción y propósito. Ideal para líderes, artistas, emprendedores.</p>
+      </div>
+
+      <div class="column">
+    <div class="hero-content">
+<img src="images/image03.JPG" alt="Gerardo Mudarra" class="square-profile" />
+    </div>
+      </div>
+    </div>
+
+    <div class="two-columns">
+      <div class="column">
+        <p><strong>Tu Imagen Habla</strong><br />
+        Una masterclass para entender el poder silencioso de tu imagen personal. Aprende a vestirte desde tu autenticidad.</p>
+      </div>
+
+      <div class="column">
+    <div class="hero-content">
+<img src="images/image09.jpeg" alt="Gerardo Mudarra" class="square-profile" />
+    </div>
+      </div>
+    </div>
+
+    <div class="two-columns">
+      <div class="column">
+        <h3>Talleres Especializados</h3>
+        <p><strong>Fashion Camp – Marca Personal</strong><br />
+        Programa intensivo de 15 días para construir una marca auténtica y emocional. Clases + retos + seguimiento personalizado.</p>
+      </div>
+
+      <div class="column">
+    <div class="hero-content">
+<img src="images/image07.jpg" alt="Gerardo Mudarra" class="square-profile" />
+    </div>
+      </div>
+    </div>
+
+
+    <div class="two-columns">
+      <div class="column">
+
+        <p><strong>Proyección Escénica</strong><br />
+        Taller para modelos y artistas que desean dominar la escena con autenticidad. Técnicas de expresión, postura, presencia.</p>
+
+      </div>
+
+      <div class="column">
+    <div class="hero-content">
+<img src="images/image06.jpg" alt="Gerardo Mudarra" class="square-profile" />
+    </div>
+      </div>
+    </div>
+
+    <div class="two-columns">
+      <div class="column">
+        <p><strong>Aprende a Ser Fotogénico(a)</strong><br />
+        Reconéctate con la cámara y transmite desde lo genuino. Técnicas de expresión facial, mirada, cuerpo y prácticas guiadas.</p>
+      </div>
+
+      <div class="column">
+    <div class="hero-content">
+<img src="images/image04.JPG" alt="Gerardo Mudarra" class="square-profile" />
+    </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <!-- CTA Final -->
+<!-- Formulario de contacto -->
+<!-- CTA Final -->
+<section class="section" style="max-width: 700px; margin: 0 auto;" id="cta">
+  <h2 style="text-align: center;">¿Listo para comenzar tu transformación?</h2>
+  <div style="text-align: center;">
+    <button class="button" onclick="mostrarFormulario()">¡Comienza ahora!</button>
+  </div>
+
+  <!-- Formulario oculto al inicio -->
+  <form id="formulario-contacto" action="https://formspree.io/f/xovlpoae" method="POST" style="display: none; padding-top: 80px;">
+    <label>Nombre completo<br />
+      <input type="text" name="nombre" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Correo electrónico<br />
+      <input type="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Fecha de nacimiento<br />
+      <input type="date" name="fecha_nacimiento" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>Redes sociales (Instagram, LinkedIn, etc.)<br />
+      <input type="text" name="redes" placeholder="https://..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <label>¿Qué te gustaría mejorar o potenciar de tu marca personal?<br />
+      <select name="intereses[]" multiple size="6" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;">
+        <option>Imagen personal</option>
+        <option>Comunicación y oratoria</option>
+        <option>Presencia digital</option>
+        <option>Autenticidad y propósito</option>
+        <option>Seguridad al hablar o mostrarse</option>
+        <option>Otro</option>
+      </select>
+    </label>
+
+    <label>Cuéntame brevemente qué te mueve o qué estás buscando<br />
+      <textarea name="mensaje" rows="5" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;"></textarea>
+    </label>
+
+    <label>¿Cómo te gustaría que te contacte?<br />
+      <select name="preferencia_contacto" style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 10px;">
+        <option>Correo electrónico</option>
+        <option>WhatsApp</option>
+        <option>Videollamada (Zoom o Meet)</option>
+      </select>
+    </label>
+
+    <label>Número de WhatsApp (opcional)<br />
+      <input type="text" name="whatsapp" placeholder="+34..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
+    </label>
+
+    <button type="submit" class="button">Enviar</button>
+  </form>
+
+</section>
+
+<!-- blog -->
+<section class="section" style="max-width: 700px; margin: 0 auto;" id="blog">
+  <h2 style="text-align: center;">Blog</h2>
+  <div style="text-align: center;">
+    <p>Lee mis artículos sobre marca personal, comunicación e imagen auténtica.</p>
+    <a href="https://gerardomudarra.hashnode.dev" target="_blank" class="button">Visitar el Blog</a>
+  </div>
+</section>
+<section id="blog-preview" class="section">
+  <h2>Últimos artículos</h2>
+  <div id="posts-container" style="display: flex; gap: 20px; flex-wrap: wrap;"></div>
+</section>
+
+
+<script>
+  function mostrarFormulario() {
+    const form = document.getElementById('formulario-contacto');
+    form.style.display = 'block';
+    form.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+  <section class="hero-signature">
+
+    <div class="hero-content">
+      <img src="images/signature_black.png" alt="Firma Gerardo" class="signature" />
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+  <p>© 2025 Gerardo Mudarra</p>
+  <div style="margin-top: 20px;">
+    <a href="https://www.instagram.com/soygerardomudarra/" target="_blank" style="margin: 0 10px; color: white; font-size: 24px;">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/@Gerardomudarra" target="_blank" style="margin: 0 10px; color: white; font-size: 24px;">
+      <i class="fab fa-youtube"></i>
+    </a>
+    <a href="https://www.tiktok.com/@soygerardomudarra" target="_blank" style="margin: 0 10px; color: white; font-size: 24px;">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/gerardo-mudarra-4257b4170/" target="_blank" style="margin: 0 10px; color: white; font-size: 24px;">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- AÑADE esto antes del cierre del <body> -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  }
+
+  // Cerrar menú cuando se haga clic en un enlace del menú móvil
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileLinks = document.querySelectorAll("#mobileMenu a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobileMenu").style.display = "none";
+      });
+    });
+  });
+</script>
+
+i<script>
+  async function fetchLatestPosts() {
+    const query = `
+      query {
+        publication(host: "gerardomudarra.hashnode.dev") {
+          posts(page: 0) {
+            title
+            brief
+            coverImage {
+              url
+            }
+            slug
+            publishedAt
+          }
+        }
+      }
+    `;
+    const response = await fetch('https://api.hashnode.com/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query })
+    });
+    const { data } = await response.json();
+    const posts = data.publication.posts;
+    const container = document.getElementById('posts-container');
+    posts.slice(0, 3).forEach(post => {
+      const postEl = document.createElement('div');
+      postEl.style = 'flex: 1 1 30%; border: 1px solid #ddd; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);';
+      postEl.innerHTML = `
+        <img src="${post.coverImage.url || ''}" alt="${post.title}" style="width:100%; height: auto; border-radius: 5px;">
+        <h3><a href="https://gerardomudarra.hashnode.dev/${post.slug}" target="_blank">${post.title}</a></h3>
+        <p>${post.brief}</p>
+      `;
+      container.appendChild(postEl);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', fetchLatestPosts);
+</script>
+
+</body>
+</html>
+
