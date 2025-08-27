@@ -563,6 +563,7 @@
       <input type="text" name="whatsapp" placeholder="+34..." style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 20px;" />
     </label>
 
+
     <button type="submit" class="button">Enviar</button>
   </form>
 
@@ -666,6 +667,50 @@
   });
 </script>
 
+<script>
+  function mostrarFormulario() {
+    const form = document.getElementById('formulario-contacto');
+    form.style.display = 'block';
+    form.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileLinks = document.querySelectorAll("#mobileMenu a");
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("mobileMenu").style.display = "none";
+      });
+    });
+
+    // CAMBIO DINÁMICO DEL CAMPO SEGÚN PREFERENCIA
+    const select = document.querySelector("select[name='preferencia_contacto']");
+    const inputField = document.querySelector("input[name='whatsapp']");
+    const inputLabel = inputField.closest("label");
+
+    function actualizarCampoContacto() {
+      const seleccion = select.value;
+      if (seleccion === "Correo electrónico") {
+        inputField.type = "email";
+        inputField.placeholder = "ejemplo@correo.com";
+        inputLabel.innerHTML = "Correo electrónico de contacto<br />";
+        inputLabel.appendChild(inputField);
+      } else if (seleccion === "WhatsApp") {
+        inputField.type = "text";
+        inputField.placeholder = "+34...";
+        inputLabel.innerHTML = "Número de WhatsApp<br />";
+        inputLabel.appendChild(inputField);
+      } else if (seleccion === "Videollamada (Zoom o Meet)") {
+        inputField.type = "text";
+        inputField.placeholder = "Tu usuario o correo para agendar";
+        inputLabel.innerHTML = "Usuario de Zoom/Meet o correo<br />";
+        inputLabel.appendChild(inputField);
+      }
+    }
+
+    select.addEventListener("change", actualizarCampoContacto);
+    actualizarCampoContacto(); // inicializar con valor actual
+  });
+</script>
 
 </body>
 </html>
